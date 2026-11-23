@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sentinel</string>
+    <string name="tab_log">Jurnal</string>
+    <string name="tab_apps">Aplicații</string>
+    <string name="tab_settings">Setări</string>
+
+    <string name="monitoring_title">Monitorizare</string>
+    <string name="monitoring_desc">Urmărește în fundal când este folosită camera sau microfonul.</string>
+
+    <string name="event_camera_start">Camera a pornit</string>
+    <string name="event_camera_stop">Camera s-a oprit</string>
+    <string name="event_mic_start">Microfonul a pornit</string>
+    <string name="event_mic_stop">Microfonul s-a oprit</string>
+    <string name="suspicious">Suspect</string>
+    <string name="screen_off">ecran stins</string>
+    <string name="probable_app">Probabil: %1$s</string>
+    <string name="unknown_app">Aplicație necunoscută</string>
+    <string name="empty_log">Niciun eveniment încă. Pornește monitorizarea, apoi deschide camera ca test.</string>
+    <string name="clear_log">Șterge jurnalul</string>
+
+    <string name="alert_suspicious_camera">Camera activă cu ecranul stins</string>
+    <string name="alert_suspicious_mic">Microfon activ cu ecranul stins</string>
+    <string name="alert_use_camera">Camera este folosită</string>
+    <string name="alert_use_mic">Microfonul este folosit</string>
+    <string name="alert_text_default">Deschide Sentinel pentru a vedea jurnalul.</string>
+    <string name="notif_monitor_title">Sentinel urmărește camera și microfonul</string>
+    <string name="notif_monitor_text">Nimic nu părăsește telefonul tău.</string>
+    <string name="channel_monitor">Stare monitorizare</string>
+    <string name="channel_alerts">Alerte</string>
+
+    <string name="apps_intro">Aplicații care pot folosi camera sau microfonul.</string>
+    <string name="apps_empty">Nu s-au găsit aplicații.</string>
+    <string name="perm_camera">Camera</string>
+    <string name="perm_mic">Microfon</string>
+    <string name="perm_allowed">permis</string>
+    <string name="perm_denied">nepermis</string>
+    <string name="perm_none">indisponibil</string>
+    <string name="open_settings">Setări</string>
+    <string name="privacy_settings">Setări de confidențialitate ale sistemului</string>
+
+    <string name="usage_access_title">Identifică aplicația probabilă</string>
+    <string name="usage_access_desc">Opțional. Accesul la utilizare permite legarea unui eveniment de aplicația aflată în prim-plan.</string>
+    <string name="grant">Acordă</string>
+    <string name="granted">Acordat</string>
+    <string name="alert_all_title">Alertă la fiecare folosire</string>
+    <string name="alert_all_desc">Altfel, doar folosirile suspecte declanșează o alertă.</string>
+    <string name="limits_title">Limite</string>
+    <string name="limits_text">Sentinel detectează și raportează folosirea camerei și a microfonului prin API-uri publice Android. Nu poate bloca alt software sau sistemul însuși, iar aplicația afișată pentru un eveniment este doar o estimare. Sentinel nu are permisiune de internet, deci nimic nu părăsește telefonul.</string>
+</resources>

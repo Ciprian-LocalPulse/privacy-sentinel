@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sentinel</string>
+    <string name="tab_log">Log</string>
+    <string name="tab_apps">Apps</string>
+    <string name="tab_settings">Settings</string>
+
+    <string name="monitoring_title">Monitoring</string>
+    <string name="monitoring_desc">Watches in the background when the camera or microphone is used.</string>
+
+    <string name="event_camera_start">Camera started</string>
+    <string name="event_camera_stop">Camera stopped</string>
+    <string name="event_mic_start">Microphone started</string>
+    <string name="event_mic_stop">Microphone stopped</string>
+    <string name="suspicious">Suspicious</string>
+    <string name="screen_off">screen off</string>
+    <string name="probable_app">Probably: %1$s</string>
+    <string name="unknown_app">App unknown</string>
+    <string name="empty_log">No events yet. Turn monitoring on, then open the camera to test.</string>
+    <string name="clear_log">Clear log</string>
+
+    <string name="alert_suspicious_camera">Camera active with the screen off</string>
+    <string name="alert_suspicious_mic">Microphone active with the screen off</string>
+    <string name="alert_use_camera">Camera in use</string>
+    <string name="alert_use_mic">Microphone in use</string>
+    <string name="alert_text_default">Open Sentinel to see the log.</string>
+    <string name="notif_monitor_title">Sentinel is watching the camera and microphone</string>
+    <string name="notif_monitor_text">Nothing leaves your phone.</string>
+    <string name="channel_monitor">Monitoring status</string>
+    <string name="channel_alerts">Alerts</string>
+
+    <string name="apps_intro">Apps that can use your camera or microphone.</string>
+    <string name="apps_empty">No apps found.</string>
+    <string name="perm_camera">Camera</string>
+    <string name="perm_mic">Microphone</string>
+    <string name="perm_allowed">allowed</string>
+    <string name="perm_denied">not allowed</string>
+    <string name="perm_none">n/a</string>
+    <string name="open_settings">Settings</string>
+    <string name="privacy_settings">System privacy settings</string>
+
+    <string name="usage_access_title">Identify the probable app</string>
+    <string name="usage_access_desc">Optional. Usage access lets Sentinel link an event to the app that was in the foreground.</string>
+    <string name="grant">Grant</string>
+    <string name="granted">Granted</string>
+    <string name="alert_all_title">Alert on every use</string>
+    <string name="alert_all_desc">Otherwise only suspicious uses trigger an alert.</string>
+    <string name="limits_title">Limits</string>
+    <string name="limits_text">Sentinel detects and reports camera and microphone use through public Android APIs. It cannot block other software or the system itself, and the app shown for an event is only a best guess. Sentinel has no internet permission, so nothing leaves your phone.</string>
+</resources>
