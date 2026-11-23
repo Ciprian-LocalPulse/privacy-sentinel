@@ -1,11 +1,11 @@
 version: 2
 updates:
   - package-ecosystem: "gradle"
-      ignore:
-      - dependency-name: "androidx.compose:compose-bom"
     directory: "/"
     schedule:
       interval: "weekly"
+    ignore:
+      - dependency-name: "androidx.compose:compose-bom"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
