@@ -51,7 +51,7 @@ object ForegroundAppResolver {
     fun label(ctx: Context, packageName: String): String = try {
         val pm = ctx.packageManager
         pm.getApplicationLabel(pm.getApplicationInfo(packageName, 0)).toString()
-    } catch (_: PackageManager.NameNotFoundException) {
+    } catch (e: PackageManager.NameNotFoundException) {
         packageName
     }
 

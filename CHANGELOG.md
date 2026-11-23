@@ -4,6 +4,8 @@ All notable changes are documented here. Format based on [Keep a Changelog](http
 versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Build: migrated `jvmTarget` to the `compilerOptions` DSL; replaced `catch (_: ...)` with a named parameter for Kotlin 2.0.x compatibility.
 
 ## [0.1.0] - 2026-11-23
 ### Added

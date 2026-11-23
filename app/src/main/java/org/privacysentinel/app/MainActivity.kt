@@ -69,7 +69,7 @@ class MainActivity : ComponentActivity() {
 private fun safeStart(ctx: Context, intent: Intent) {
     try {
         ctx.startActivity(intent)
-    } catch (_: ActivityNotFoundException) {
+    } catch (e: ActivityNotFoundException) {
         // Some OEM builds lack certain settings screens; ignore.
     }
 }
