@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "weekly"
     ignore:
-      - dependency-name: "androidx.compose:compose-bom"
+      - dependency-name: "androidx.*"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
