@@ -6,6 +6,9 @@ on:
     tags: ["v*"]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,13 +27,21 @@ jobs:
       - name: Build debug APK
         run: gradle :app:assembleDebug --no-daemon
 
+      - name: Check that the APK has no internet permission
+        run: |
+          APK=$(ls app/build/outputs/apk/debug/*.apk | head -n 1)
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -n 1)
+          "$BT/aapt" dump permissions "$APK" | tee perms.txt
+          if grep -q "android.permission.INTERNET" perms.txt; then
+            echo "::error::INTERNET permission found in APK"; exit 1
+          fi
+
       - uses: actions/upload-artifact@v4
         with:
           name: sentinel-debug-apk
           path: app/build/outputs/apk/debug/*.apk
 
   release:
-    # On version tags, attach an APK to a GitHub Release.
     if: startsWith(github.ref, 'refs/tags/v')
     needs: build
     runs-on: ubuntu-latest
@@ -40,6 +51,10 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: sentinel-debug-apk
+      - name: Checksums
+        run: sha256sum *.apk > SHA256SUMS.txt
       - uses: softprops/action-gh-release@v2
         with:
-          files: "*.apk"
+          files: |
+            *.apk
+            SHA256SUMS.txt

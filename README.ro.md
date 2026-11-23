@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/banner.png" alt="Sentinel: detector pentru camera și microfonul telefonului" width="100%">
+</p>
+
 # Sentinel — cine folosește camera și microfonul telefonului tău
 
 Sentinel îți arată **când sunt folosite camera sau microfonul, de către ce aplicație (estimare) și dacă s-a întâmplat cu ecranul stins**. Gratuit, open source, fără permisiune de internet.
@@ -35,7 +39,7 @@ Android 8.0+ (API 26). Permisiunea de notificări pe Android 13+.
 Ai nevoie de JDK 17 și Android Studio.
 
 ```bash
-git clone https://github.com/<contul-tau>/privacy-sentinel.git
+git clone https://github.com/Ciprian-LocalPulse/privacy-sentinel.git
 cd privacy-sentinel
 # Deschide în Android Studio și apasă Run, sau:
 gradle :app:assembleDebug
@@ -43,6 +47,22 @@ gradle :app:assembleDebug
 APK: `app/build/outputs/apk/debug/app-debug.apk`
 
 GitHub Actions compilează automat un APK la fiecare push. Un tag de forma `v0.1.0` îl atașează la un Release.
+
+
+## Documentație
+- [Whitepaper (PDF)](docs/Sentinel-Whitepaper.pdf), în engleză, cu rezumat în română
+- [Model de amenințări](docs/THREAT_MODEL.md)
+- [Plan de testare](docs/TESTING.md)
+- [Politica de confidențialitate](PRIVACY_POLICY.md)
+- [Politica de securitate](SECURITY.md)
+- [Notificări terți](THIRD_PARTY_NOTICES.md)
+- [Istoric versiuni](CHANGELOG.md)
+
+## Stare
+Versiune timpurie (0.1.0). Codul a fost scris și verificat, dar **încă nu a fost validat pe multe telefoane**. Te rog să-l încerci și să raportezi rezultatele folosind [planul de testare](docs/TESTING.md).
+
+## Verifică o descărcare
+Fiecare Release include `SHA256SUMS.txt`. CI-ul respinge automat orice build al cărui APK conține permisiunea `INTERNET`.
 
 ## Licență
 MIT — vezi [LICENSE](LICENSE).

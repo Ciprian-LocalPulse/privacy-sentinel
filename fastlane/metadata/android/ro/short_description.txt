@@ -1,0 +1,1 @@
+Detector de folosire a camerei și microfonului. Fără permisiune de internet.

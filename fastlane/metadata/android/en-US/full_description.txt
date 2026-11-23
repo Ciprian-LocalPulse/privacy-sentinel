@@ -1,0 +1,16 @@
+Sentinel tells you when your camera or microphone is used, by which app (best guess), and whether it happened while your screen was off.
+
+<b>Features</b>
+<ul>
+<li>Live log of camera and microphone start/stop</li>
+<li>Alerts for suspicious use with the screen off (calls excluded)</li>
+<li>Probable app for each event (optional Usage access)</li>
+<li>Audit of apps that can use the camera or microphone</li>
+<li>Restarts after reboot</li>
+</ul>
+
+<b>Privacy</b>
+No internet permission, no trackers, no ads. Everything stays on your phone.
+
+<b>Limits</b>
+Sentinel detects and reports. It cannot block access by system-level software or a compromised OS.

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4A6A94"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="560" fill="#FFFFFF"/>
+
+  <!-- Android framework -->
+  <rect x="20" y="20" width="300" height="520" rx="14" fill="#F1F5FA" stroke="#B8C9DE"/>
+  <text x="170" y="48" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Android framework (public APIs)</text>
+
+  <rect x="45" y="80" width="250" height="70" rx="10" fill="#FFFFFF" stroke="#4A6A94"/>
+  <text x="170" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">CameraManager</text>
+  <text x="170" y="130" text-anchor="middle" font-size="12" fill="#355375">AvailabilityCallback</text>
+
+  <rect x="45" y="180" width="250" height="70" rx="10" fill="#FFFFFF" stroke="#4A6A94"/>
+  <text x="170" y="208" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">AudioManager</text>
+  <text x="170" y="230" text-anchor="middle" font-size="12" fill="#355375">AudioRecordingCallback</text>
+
+  <rect x="45" y="280" width="250" height="70" rx="10" fill="#FFFFFF" stroke="#4A6A94"/>
+  <text x="170" y="308" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">PowerManager</text>
+  <text x="170" y="330" text-anchor="middle" font-size="11" fill="#355375">screen state (+ call mode via AudioManager)</text>
+
+  <rect x="45" y="380" width="250" height="70" rx="10" fill="#FFFFFF" stroke="#4A6A94" stroke-dasharray="6 4"/>
+  <text x="170" y="408" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">UsageStatsManager</text>
+  <text x="170" y="430" text-anchor="middle" font-size="12" fill="#355375">optional, user-granted</text>
+
+  <rect x="45" y="475" width="250" height="45" rx="10" fill="#FFFFFF" stroke="#4A6A94"/>
+  <text x="170" y="503" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">PackageManager</text>
+
+  <!-- Sentinel app -->
+  <rect x="380" y="20" width="600" height="520" rx="14" fill="#EAF4FD" stroke="#4FC3F7"/>
+  <text x="680" y="48" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Sentinel app (no INTERNET permission)</text>
+
+  <rect x="410" y="100" width="260" height="130" rx="10" fill="#FFFFFF" stroke="#27508A" stroke-width="2"/>
+  <text x="540" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">MonitorService</text>
+  <text x="540" y="152" text-anchor="middle" font-size="12" fill="#355375">foreground service</text>
+  <text x="540" y="174" text-anchor="middle" font-size="12" fill="#355375">state machines: camera, mic</text>
+  <text x="540" y="196" text-anchor="middle" font-size="12" fill="#355375">suspicious rule + attribution</text>
+  <text x="540" y="216" text-anchor="middle" font-size="12" fill="#355375">single-thread I/O executor</text>
+
+  <rect x="740" y="80" width="210" height="70" rx="10" fill="#FFFFFF" stroke="#27508A"/>
+  <text x="845" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">EventStore</text>
+  <text x="845" y="130" text-anchor="middle" font-size="12" fill="#355375">private SQLite, max 5,000 rows</text>
+
+  <rect x="740" y="190" width="210" height="60" rx="10" fill="#FFFFFF" stroke="#27508A"/>
+  <text x="845" y="216" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Notifier</text>
+  <text x="845" y="236" text-anchor="middle" font-size="12" fill="#355375">alerts + status notification</text>
+
+  <rect x="410" y="340" width="260" height="90" rx="10" fill="#FFFFFF" stroke="#27508A"/>
+  <text x="540" y="368" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">PermissionAuditor</text>
+  <text x="540" y="392" text-anchor="middle" font-size="12" fill="#355375">apps with CAMERA / RECORD_AUDIO</text>
+  <text x="540" y="412" text-anchor="middle" font-size="12" fill="#355375">granted or not</text>
+
+  <rect x="740" y="340" width="210" height="90" rx="10" fill="#FFFFFF" stroke="#27508A" stroke-width="2"/>
+  <text x="845" y="368" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">UI (Compose)</text>
+  <text x="845" y="392" text-anchor="middle" font-size="12" fill="#355375">Log / Apps / Settings</text>
+  <text x="845" y="412" text-anchor="middle" font-size="12" fill="#355375">EN + RO</text>
+
+  <rect x="410" y="262" width="260" height="55" rx="10" fill="#FFFFFF" stroke="#27508A"/>
+  <text x="540" y="286" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">BootReceiver</text>
+  <text x="540" y="306" text-anchor="middle" font-size="12" fill="#355375">resume after reboot</text>
+
+  <!-- arrows from framework to service -->
+  <path d="M295 115 L360 115 L360 140 L410 140" fill="none" stroke="#4A6A94" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M295 215 L410 190" fill="none" stroke="#4A6A94" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M295 315 L350 315 L350 215 L410 215" fill="none" stroke="#4A6A94" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M295 415 L395 415 L395 232 L410 232" fill="none" stroke="#4A6A94" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <path d="M295 498 L380 498 L380 385 L410 385" fill="none" stroke="#4A6A94" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- internal arrows -->
+  <path d="M670 140 L740 120" fill="none" stroke="#27508A" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M670 200 L740 218" fill="none" stroke="#27508A" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M950 115 L968 115 L968 385 L950 385" fill="none" stroke="#27508A" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M670 385 L740 385" fill="none" stroke="#27508A" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M540 262 L540 230" fill="none" stroke="#27508A" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+</svg>

@@ -22,3 +22,14 @@ you may commit it with `gradle wrapper`).
 - Turn the screen off while a recorder runs -> event flagged "Suspicious" + alert.
 - Phone call with screen off -> must NOT be flagged.
 - Reboot -> monitoring resumes if it was on.
+
+## Rebuilding the whitepaper PDF
+After editing `docs/WHITEPAPER.md`:
+```bash
+pip install reportlab pillow
+python3 docs/build_whitepaper.py
+```
+(Needs the DejaVu fonts; on Debian/Ubuntu: `apt install fonts-dejavu`.)
+
+## Conduct and security
+Please follow the [Code of Conduct](CODE_OF_CONDUCT.md). Report vulnerabilities privately, see [SECURITY.md](SECURITY.md).

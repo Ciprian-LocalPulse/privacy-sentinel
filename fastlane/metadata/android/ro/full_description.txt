@@ -1,0 +1,16 @@
+Sentinel îți arată când sunt folosite camera sau microfonul, de către ce aplicație (estimare) și dacă s-a întâmplat cu ecranul stins.
+
+<b>Funcții</b>
+<ul>
+<li>Jurnal live cu pornirea și oprirea camerei și microfonului</li>
+<li>Alerte pentru folosiri suspecte cu ecranul stins (apelurile sunt excluse)</li>
+<li>Aplicația probabilă pentru fiecare eveniment (acces opțional la utilizare)</li>
+<li>Audit al aplicațiilor care pot folosi camera sau microfonul</li>
+<li>Repornește după reboot</li>
+</ul>
+
+<b>Confidențialitate</b>
+Fără permisiune de internet, fără trackere, fără reclame. Totul rămâne pe telefon.
+
+<b>Limite</b>
+Sentinel detectează și raportează. Nu poate bloca accesul software-ului cu privilegii de sistem sau al unui OS compromis.

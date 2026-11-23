@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12294A"/>
+      <stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#27508A"/>
+      <stop offset="1" stop-color="#0F2340"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4FC3F7" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#4FC3F7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="300" cy="320" r="320" fill="url(#glow)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1">
+    <path d="M0 80H1280M0 160H1280M0 240H1280M0 320H1280M0 400H1280M0 480H1280M0 560H1280"/>
+    <path d="M80 0V640M160 0V640M240 0V640M320 0V640M400 0V640M480 0V640M560 0V640M640 0V640M720 0V640M800 0V640M880 0V640M960 0V640M1040 0V640M1120 0V640M1200 0V640"/>
+  </g>
+
+  <!-- logo -->
+  <g transform="translate(110 150) scale(0.67)">
+    <rect width="512" height="512" rx="112" fill="url(#tile)"/>
+    <path d="M256 92 L372 134 L372 252 C372 322 324 374 256 404 C188 374 140 322 140 252 L140 134 Z" fill="#FFFFFF"/>
+    <ellipse cx="256" cy="244" rx="62" ry="40" fill="#0F2340"/>
+    <circle cx="256" cy="244" r="25" fill="#4FC3F7"/>
+    <circle cx="256" cy="244" r="11" fill="#0F2340"/>
+    <circle cx="264" cy="236" r="5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- text -->
+  <text x="500" y="270" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="108" font-weight="700" fill="#FFFFFF">Sentinel</text>
+  <text x="504" y="332" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="32" fill="#9FC4EA">Camera &amp; microphone watchdog for Android</text>
+
+  <!-- chips -->
+  <g font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="24" fill="#FFFFFF">
+    <rect x="504" y="384" width="180" height="52" rx="26" fill="#FFFFFF" fill-opacity="0.10" stroke="#4FC3F7" stroke-opacity="0.6"/>
+    <text x="594" y="418" text-anchor="middle">Open source</text>
+    <rect x="700" y="384" width="180" height="52" rx="26" fill="#FFFFFF" fill-opacity="0.10" stroke="#4FC3F7" stroke-opacity="0.6"/>
+    <text x="790" y="418" text-anchor="middle">No trackers</text>
+    <rect x="896" y="384" width="310" height="52" rx="26" fill="#FFFFFF" fill-opacity="0.10" stroke="#4FC3F7" stroke-opacity="0.6"/>
+    <text x="1051" y="418" text-anchor="middle">No internet permission</text>
+  </g>
+
+  <text x="504" y="520" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="22" fill="#6F8FB5">Detects. Reports. Never phones home.</text>
+</svg>

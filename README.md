@@ -1,3 +1,15 @@
+<p align="center">
+  <img src="docs/images/banner.png" alt="Sentinel: camera and microphone watchdog for Android" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/Ciprian-LocalPulse/privacy-sentinel/actions/workflows/build.yml"><img alt="Build" src="https://github.com/Ciprian-LocalPulse/privacy-sentinel/actions/workflows/build.yml/badge.svg"></a>
+  <a href="https://github.com/Ciprian-LocalPulse/privacy-sentinel/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/Ciprian-LocalPulse/privacy-sentinel/actions/workflows/codeql.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <img alt="Android 8.0+" src="https://img.shields.io/badge/Android-8.0%2B-3DDC84.svg">
+  <img alt="No internet permission" src="https://img.shields.io/badge/internet%20permission-none-success.svg">
+</p>
+
 # Sentinel — camera & microphone watchdog for Android
 
 Sentinel tells you **when your camera or microphone is used, by whom (best guess), and whether it happened while your screen was off**. Free, open source, no internet permission.
@@ -35,7 +47,7 @@ Android 8.0+ (API 26). Notifications permission on Android 13+.
 Requirements: JDK 17 and Android Studio (or the Android SDK).
 
 ```bash
-git clone https://github.com/<you>/privacy-sentinel.git
+git clone https://github.com/Ciprian-LocalPulse/privacy-sentinel.git
 cd privacy-sentinel
 # Open in Android Studio and press Run, or:
 gradle :app:assembleDebug
@@ -71,8 +83,30 @@ app/src/main/java/org/privacysentinel/app/
 - Optional Shizuku support for exact app attribution via AppOps (still no root)
 - F-Droid metadata
 
+
+## Documentation
+| Document | What it covers |
+|---|---|
+| [Whitepaper (PDF)](docs/Sentinel-Whitepaper.pdf) / [Markdown](docs/WHITEPAPER.md) | Problem, design, privacy and security analysis |
+| [Threat model](docs/THREAT_MODEL.md) | Who Sentinel can and cannot detect |
+| [Test plan](docs/TESTING.md) | Manual tests and a device results table (contributions welcome) |
+| [Privacy policy](PRIVACY_POLICY.md) | Exactly what data is handled and why each permission exists |
+| [Security policy](SECURITY.md) | How to report vulnerabilities, how to verify releases |
+| [Third-party notices](THIRD_PARTY_NOTICES.md) | Open-source dependencies and their licenses |
+| [Changelog](CHANGELOG.md) | Release history |
+
+## Status
+Early version (0.1.0). The code has been written and reviewed but **not yet validated across many devices**.
+Please test it on your phone and report results using the [test plan](docs/TESTING.md).
+
+## Verify a download
+Releases include `SHA256SUMS.txt`. CI also fails the build if the APK ever contains the `INTERNET` permission.
+```bash
+aapt dump permissions app-debug.apk   # should not list android.permission.INTERNET
+```
+
 ## Contributing / Security
-See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and [SECURITY.md](SECURITY.md).
 
 ## License
 MIT — see [LICENSE](LICENSE).
